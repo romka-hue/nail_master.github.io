@@ -3,20 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nail Master - Coming Soon</title>
+    <title>Nail Master - Professional Nail Art & Beauty Care</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="content">
-            <h1>Nail Master</h1>
-            <p class="subtitle">Professional Nail Care Services</p>
-            <div class="coming-soon">
-                <h2>Coming Soon</h2>
-                <p>We're working hard to bring you the best nail care experience. Stay tuned!</p>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">Nail Master</div>
+                <ul class="nav-links">
+                    <li><a href="#home" data-en="Home" data-ka="მთავარი">Home</a></li>
+                    <li><a href="#services" data-en="Services" data-ka="სერვისები">Services</a></li>
+                    <li><a href="#gallery" data-en="Gallery" data-ka="გალერეა">Gallery</a></li>
+                    <li><a href="#about" data-en="About" data-ka="ჩვენ შესახებ">About</a></li>
+                    <li><a href="#contact" data-en="Contact" data-ka="კონტაქტი">Contact</a></li>
+                </ul>
+                <button class="lang-toggle" id="langToggle">ქართული</button>
             </div>
-            
         </div>
-    </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1 data-en="Professional Nail Art & Beauty Care" data-ka="პროფესიონალური ნაკერი ხელოვნება და სილამაზის მოვლა">Professional Nail Art & Beauty Care</h1>
+                <p class="hero-subtitle" data-en="Transform your nails into works of art with our premium services" data-ka="გადააკეთეთ თქვენი ფრჩხილები ხელოვნების ნიმუშებად ჩვენი პრემიუმ სერვისებით">Transform your nails into works of art with our premium services</p>
+                <a href="#contact" class="btn-primary" data-en="Book Appointment" data-ka="დაჯავშნე დანიშვულება">Book Appointment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title fade-in" data-en="Our Services" data-ka="ჩვენი სერვისები">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">💅</div>
+                    <h3 data-en="Manicure" data-ka="მანიკიური">Manicure</h3>
+                    <p class="price">From $25</p>
+                    <p class="description" data-en="Classic and luxury manicure with nail shaping, cuticle care, and polish" data-ka="კლასიკური და ფუფუნებული მანიკიური ფრჩხილის ფორმირებით, კუტიკულის მოვლით და ლაკით">Classic and luxury manicure with nail shaping, cuticle care, and polish</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🦶</div>
+                    <h3 data-en="Pedicure" data-ka="პედიკიური">Pedicure</h3>
+                    <p class="price">From $35</p>
+                    <p class="description" data-en="Relaxing pedicure with foot soak, exfoliation, and massage" data-ka="მშვიდობელი პედიკიური ფეხის ხორბლით, ექსფოლიაციით და მასაჟით">Relaxing pedicure with foot soak, exfoliation, and massage</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">✨</div>
+                    <h3 data-en="Gel Nails" data-ka="გელის ფრჩხილები">Gel Nails</h3>
+                    <p class="price">From $45</p>
+                    <p class="description" data-en="Long-lasting gel polish with UV curing for perfect shine" data-ka="გრძელი ხანგრძლივობის გელის ლაკი UV გამკრთალებით სრულყოფილი ბრწყინვალებისთვის">Long-lasting gel polish with UV curing for perfect shine</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">💎</div>
+                    <h3 data-en="Nail Extension" data-ka="ფრჩხილის გაფართოება">Nail Extension</h3>
+                    <p class="price">From $60</p>
+                    <p class="description" data-en="Beautiful acrylic or gel extensions for length and strength" data-ka="아름다운 აკრილის ან გელის გაფართოება სიგრძისა და სიძლიერის জন্য">Beautiful acrylic or gel extensions for length and strength</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🔧</div>
+                    <h3 data-en="Nail Repair" data-ka="ფრჩხილის მოსახსნელი">Nail Repair</h3>
+                    <p class="price">From $15</p>
+                    <p class="description" data-en="Quick fixes for broken or damaged nails" data-ka="სწრაფი გამოსწორება გატეხილი ან დაზიანებული ფრჩხილებისთვის">Quick fixes for broken or damaged nails</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <section class="has-section-divider">
+        <svg class="section-divider" viewBox="0 0 1920 60" aria-hidden="true"><path fill="#fff0f5" d="M0,80.75H1920V45.833H1742.083a80.491,80.491,0,0,1,12.863-1.55c5.2-.26,17.24-.3,24.153-.24,26.69.222,54.377,1.094,79.341.96,19.287-.1,37.1-.372,53.573-.788L1920,44V34.078l-6.614.216-9.221.256c-6.252.147-12.7.249-19.265.32-13.132.14-26.739.15-40.206.125-26.935-.052-53.313-.247-74.22.168-14.367-1.4-32.582-.756-48.293-1.92-10.145.509-20.876.936-24.149,2.4-16.09-.266-37.611,2.532-50.019.479V34.684c-10.959-2.291-33.371-1.869-48.292-3.84-15.861-.512-26.214,1.347-39.671,1.92-7.032.178-5.941-.773-13.8-.481-40.751-.071-41.131,5.477-62.087,8.16-4.569-5.691-47.085-5.126-77.622-5.04-2.333-4.154-22.643-5.808-50.015-6.479-4.677-2.069-17.763-2.969-22.423-5.04-4.7-.175-3.474.477-6.9.479-11.485-2.964-40.092-2.449-63.813-3.36-23.312.6-29.4,3.589-55.195,3.841-8.3-3.783-56.5-4.561-84.513-3.361-.316-1.857-5.682-3.862-20.7-4.8-2.193-.137-6.78.122-10.352,0-16.331-.564-22.974-3.145-39.671-1.441-22.812-1.938-73.831-3.919-98.311-.719-4.315-2.2-15.369-3.462-20.7-5.521-23.122-.714-41.26-2.815-65.54-2.64-13.5,1-29.918,1.6-39.671,3.12.27,1.317-1.305,2.38-6.9,2.88-35.562-1.333-83.117-2.545-93.139,2.88-14.338-.314-8.341,2.2-22.423,1.92-5.17-.16-2.615-1.4-6.9-1.68-36.327-1.894-80.653-1.762-100.041,2.161-12.433-1.631-21.648-3.708-36.221-5.04-13.359.1-36.33-.325-48.293-1.2-32.483.6-42.463,4.331-53.471,7.92-25.227-.147-43.752,2.274-58.641,4.321-11.966-1.189-27.56-.426-39.67-1.441-19.514,1.284-40.772,2.328-53.468,4.561C301.584,31.04,294,33.888,283.7,37.8c-15.047-.774-19.865-3.5-36.221-4.321-10.453-.522-37.12-1.01-48.3-.959-10.184.046-17.188,1.062-27.595.719-18.244,2.022-31.516,4.736-46.57,7.2-3.726,2.091-9.8,3.854-17.5,5.39H4.061c-.734-1.281-1.512-2.592-2.344-3.949-.546-.09-1.13-.175-1.717-.26Z"/></svg>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title fade-in" data-en="Our Work" data-ka="ჩვენი ნამუშევარი">Our Work</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&h=500&fit=crop" alt="Nail art 1">
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=500&h=500&fit=crop" alt="Nail art 2">
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?w=500&h=500&fit=crop" alt="Nail art 3">
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?w=500&h=500&fit=crop" alt="Nail art 4">
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=500&h=500&fit=crop" alt="Nail art 5">
+                </div>
+                <div class="gallery-item fade-in">
+                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500&h=500&fit=crop" alt="Nail art 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content fade-in">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop" alt="Mari - Nail Master">
+                </div>
+                <div class="about-text">
+                    <h2 data-en="About Me" data-ka="ჩემ შესახებ">About Me</h2>
+                    <p data-en="Hi, I'm Mari, your dedicated nail artist with over 8 years of experience in creating stunning nail designs. I'm passionate about bringing your nail dreams to life with precision, creativity, and care." data-ka="გამარჯობა, მე ვარ მარი, თქვენი ღირსეული ფრჩხილის ხელოვანი 8 წელზე მეტი გამოცდილებით. მე ვარ ვნებიერი თქვენი ფრჩხილის ოცნებების ცხოვრებაში მოტანაში სიზუსტით, შემოქმედებითობით და ზრუნვით.">Hi, I'm Mari, your dedicated nail artist with over 8 years of experience in creating stunning nail designs. I'm passionate about bringing your nail dreams to life with precision, creativity, and care.</p>
+                    <p data-en="Every client deserves personalized attention and beautiful results. I use only premium products and stay updated with the latest trends to ensure you leave with nails you'll love." data-ka="ყველა კლიენტი ღირს ინდივიდუალური ყურადღება და아름다운 შედეგები. მე ვიყენებ მხოლოდ პრემიუმ პროდუქტებს და ვრჩები განახლებული უახლესი ტენდენციებით, რათა დარწმუნდე, რომ თქვენ დატოვებთ ფრჩხილებით, რომელიც მოგწონთ.">Every client deserves personalized attention and beautiful results. I use only premium products and stay updated with the latest trends to ensure you leave with nails you'll love.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title fade-in" data-en="Book Your Appointment" data-ka="დაჯავშნე თქვენი დანიშვულება">Book Your Appointment</h2>
+            <div class="contact-content fade-in">
+                <p class="contact-text" data-en="Ready to pamper yourself? Get in touch!" data-ka="მზად ხართ თავი დაიზღვოთ? დაგვიკავშირდით!">Ready to pamper yourself? Get in touch!</p>
+                <div class="contact-info">
+                    <p class="phone">📞 <strong>+1 (555) 123-4567</strong></p>
+                </div>
+                <div class="contact-buttons">
+                    <a href="https://wa.me/15551234567" target="_blank" class="btn-whatsapp">
+                        <span class="icon">💬</span> <span data-en="WhatsApp" data-ka="WhatsApp">WhatsApp</span>
+                    </a>
+                    <a href="https://instagram.com/nailmaster" target="_blank" class="btn-instagram">
+                        <span class="icon">📸</span> <span data-en="Instagram" data-ka="Instagram">Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p data-en="© 2024 Nail Master. All rights reserved." data-ka="© 2024 Nail Master. ყველა უფლება დაცულია.">&copy; 2024 Nail Master. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
