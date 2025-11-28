@@ -1,15 +1,70 @@
+// Language management with browser preference detection and localStorage
 let currentLang = 'en';
 
-// Language toggle
-document.getElementById('langToggle').addEventListener('click', function() {
-    currentLang = currentLang === 'en' ? 'ka' : 'en';
+// Initialize language on page load
+function initializeLanguage() {
+    // 1. Check localStorage first (user's previous preference)
+    const savedLang = localStorage.getItem('preferredLanguage');
+    if (savedLang) {
+        currentLang = savedLang;
+    } else {
+        // 2. Check browser language preference
+        const browserLang = navigator.language || navigator.userLanguage;
+        // Check if browser prefers Georgian (ka)
+        if (browserLang.startsWith('ka')) {
+            currentLang = 'ka';
+        }
+    }
+    
+    // Apply the language
     updateLanguage();
-    this.textContent = currentLang === 'en' ? 'ქართული' : 'English';
-});
+    updateLanguageButton();
+}
+
+// Hamburger menu toggle
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+}
+
+// Language toggle button
+const langToggle = document.getElementById('langToggle');
+if (langToggle) {
+    langToggle.addEventListener('click', function() {
+        currentLang = currentLang === 'en' ? 'ka' : 'en';
+        // Save preference to localStorage
+        localStorage.setItem('preferredLanguage', currentLang);
+        updateLanguage();
+        updateLanguageButton();
+    });
+}
+
+function updateLanguageButton() {
+    const langText = document.getElementById('langText');
+    if (langText) {
+        langText.textContent = currentLang === 'en' ? 'KA' : 'EN';
+    }
+}
 
 function updateLanguage() {
     document.querySelectorAll('[data-en]').forEach(el => {
-        el.textContent = el.getAttribute(`data-${currentLang}`);
+        const text = el.getAttribute(`data-${currentLang}`);
+        if (text) {
+            el.textContent = text;
+        }
     });
 }
 
@@ -54,3 +109,10 @@ document.querySelectorAll('.service-card').forEach((card, index) => {
 document.querySelectorAll('.gallery-item').forEach((item, index) => {
     item.style.transitionDelay = `${index * 0.1}s`;
 });
+
+// Initialize on DOM ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeLanguage);
+} else {
+    initializeLanguage();
+}
