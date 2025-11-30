@@ -63,7 +63,16 @@ function updateLanguage() {
     document.querySelectorAll('[data-en]').forEach(el => {
         const text = el.getAttribute(`data-${currentLang}`);
         if (text) {
-            el.textContent = text;
+            if (el.classList.contains('price')) {
+                const priceMatch = el.textContent.match(/\d+/);
+                if (currentLang === 'ka') {
+                    el.textContent = (priceMatch ? priceMatch[0] : '') + text;
+                } else {
+                    el.textContent = text + (priceMatch ? priceMatch[0] : '');
+                }
+            } else {
+                el.textContent = text;
+            }
         }
     });
 }
